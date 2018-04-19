@@ -1,0 +1,8 @@
+<div *ngIf="user">
+    <h5>User Details (from child details page)</h5>    
+    <h4> Id: {{ user.id }}</h4>
+    <h4> Name: {{ user.name }}</h4>
+    <h4> Role: {{ user.role }}</h4>
+<br /><hr/>
+    <input [(ngModel)]="user.name" placeholder="name" />
+</div>

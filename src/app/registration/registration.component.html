@@ -1,0 +1,48 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container" >
+  <h4>User Registration Component</h4>
+  <hr />
+  <form #registrationForm="ngForm">
+      <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" #spy class="form-control"
+           id="name" #errMsg="ngModel" required [(ngModel)]="model.username" name="username">
+          <div [hidden]="errMsg.valid || errMsg.pristine"
+            class="alert alert-danger">
+            Name is required
+          </div>
+        </div>
+    <div class="form-group">
+      <label for="role">Role</label>
+      <select class="form-control" id="role" 
+      [(ngModel)]="model.role" name="role" required>
+        <option *ngFor="let role of roles" [value]="role">{{role}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="id">Id</label>
+      <input type="text" class="form-control" id="id"
+      [(ngModel)]="model.id" name="id"  required>
+    </div>
+    <button type="submit" class="btn btn-success" (click)="onSubmit()"
+       [disabled]="!registrationForm.form.valid">Submit</button>
+      <button type="button"
+       class="btn btn-default" 
+       (click)="onSubmit(); registrationForm.reset()">New User</button>
+  </form>
+</div>
+<!-- 
+<div style="text-align:center">
+    <div>
+        <input #userId placeholder="id" (keyup)="onUpdate" />
+        <input #userName placeholder="name" (keyup)="onUpdate" />
+        <input #userRole placeholder="role" (keyup)="onUpdate" />
+  </div>
+  <hr />
+  <div>
+        <p> {{ userId.value }} </p>
+        <p> {{ userName.value }} </p>
+        <p> {{ userRole.value }} </p>
+      </div>
+  </div>
+   -->

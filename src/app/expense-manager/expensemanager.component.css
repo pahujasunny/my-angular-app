@@ -1,0 +1,16 @@
+h1 {
+    color: #369;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+.selected{
+  background-color: aqua;
+  color: darkblue;
+}  
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+ 

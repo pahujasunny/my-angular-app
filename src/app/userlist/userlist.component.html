@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:left" *ngIf="userdatalist">
+    <h4>
+      User Listing component: 
+    </h4>
+    <hr />
+    <ul class="list-group">
+      <li 
+         class="list-group-item justify-content-between"
+         [class.adminSelected] = "isAdminSelected"
+         [style.font-size] = "user===selectedUser ? '150%': '100%'"
+         [class.selected]="user===selectedUser"         
+         (click)="onRowSelect(user)"
+         *ngFor="let user of userdatalist">
+        <span class="badge">{{user.id}}</span> {{user.name}}
+      </li>
+    </ul>    
+    <hr />
+    <h3>Using child component to show user details:</h3>
+    <app-userdetails [user]="selectedUser"></app-userdetails>
+  </div>
+  

@@ -1,0 +1,40 @@
+<!-- A grey horizontal navbar that becomes vertical on small screens -->
+<div class='main-nav'>
+    <div class='navbar navbar-inverse'>
+        <div class='navbar-header'>
+            <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>
+                <span class='sr-only'>Toggle navigation</span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+            </button>
+            <a class='navbar-brand'>NavBar Component | </a>
+        </div>
+        <div class='navbar-collapse collapse'>
+            <ul class='nav navbar-nav'>
+                    <li><a routerLink="/userinfo" class="nav-link">
+                        <span class='glyphicon glyphicon-home'></span> Home</a></li>
+                    <li><a  routerLink="/registration" class="nav-link">
+                        <span class='glyphicon glyphicon-home'></span> Registration</a></li>
+                    <li><a  routerLink="/forms" class="nav-link">
+                        <span class='glyphicon glyphicon-home'></span> Forms (2Way + Validations)</a></li>
+                    <li><a  routerLink="/expensemanager" class="nav-link">
+                        <span class='glyphicon glyphicon-home'></span> Expense Manager</a></li>
+                    <li><a  routerLink="/medicalstore" class="nav-link">
+                        <span class='glyphicon glyphicon-home'></span> Medical Store</a></li>                        
+                    <li><a routerLink="/userdetails" class="nav-link">
+                        <span class='glyphicon glyphicon-home'></span> User Details</a></li>
+                <li><a routerLink="/practise" class="nav-link">
+                    <span class='glyphicon glyphicon-th-list'></span> Practise Modules</a></li>
+                <li><a  routerLink="/users" class="nav-link">
+                    <span class='glyphicon glyphicon-th-list'></span> Users</a></li>
+                <li><a><span class='glyphicon glyphicon-education'></span> Learning Angular</a></li>
+                <!-- <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/fetch-data']"><span class='glyphicon glyphicon-th-list'></span> Fetch data</a>
+                </li>
+                <a routerLink="/users" class="nav-link">Users</a>
+                <a routerLink="/userdetails" class="nav-link">User Details</a> -->
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="card" *ngIf="expense">
+    <h4>Expense Details (Stateless Component)</h4>   
+    <hr /> 
+    <p> <b>Id:</b> {{ expense.id }}</p>
+    <p> <b>Category:</b> {{ expense.category }}</p>
+    <p> <b>Amount:</b> {{ expense.amount }}</p>
+    <p> <b>Details:</b> {{ expense.details }}</p>
+<!-- <br /><hr/>
+    <input [(ngModel)]="expense.amount" placeholder="amount" /> -->
+</div>
